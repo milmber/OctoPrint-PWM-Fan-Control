@@ -12,7 +12,7 @@ See the original documentation for wiring the PWM fan to the Pi [Using Raspberry
 3. Configure the `INSTALL_DIR` variable inside the [read_fan_speed.sh](src/read_fan_speed.sh) and the [install_cpu_fan_control.sh](src/install_cpu_fancontrol.sh) scripts to your desired installation directory.
 4. Run the script with `sudo bash install_cpu_fan_control.sh`.
 5. Install the [OctoPrint Top Temp](https://github.com/LazeMSS/OctoPrint-TopTemp) plugin via the OctoPrint Plugin Manager.
-6. Configure the [OctoPrint Top Temp](https://github.com/LazeMSS/OctoPrint-TopTemp) plugin to use the CPU temperature sensor using `Command` type with the command:
+6. Configure the [OctoPrint Top Temp](https://github.com/LazeMSS/OctoPrint-TopTemp) plugin for a new Custom metric calling this `CPU Fan` (or whatever you want to call the metric) sensor using `Command` type with the command:
    ```
    /usr/bin/bash /home/pi/cpu_fan_control/read_fan_speed.sh
    ```
