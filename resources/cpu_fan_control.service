@@ -1,0 +1,15 @@
+[Unit]
+Description=CPU Fan Control
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/cpu_fan_control/fan_control.py
+WorkingDirectory=/home/pi/cpu_fan_control
+RestartSec=1
+StartLimitBurst=5
+StartLimitIntervalSec=10
+StandardOutput=inherit
+StandardError=inherit
+User=pi
+
+[Install]
+WantedBy=multi-user.target
